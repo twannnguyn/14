@@ -243,7 +243,7 @@ body {
 .right .box__account{
     position: relative;
     transform: translateY(700px);
-    animation: topBoxImage 8s 7s forwards ease-in;
+    animation: topBoxImage 4s 3s forwards ease-in;
 }
 @keyframes topBoxImage{
     to{
@@ -299,7 +299,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: rotateCricle 5s linear infinite;
+    animation: rotateCricle 2.5s linear infinite;
 }
 @keyframes rotateCricle{
     to{
@@ -455,42 +455,19 @@ body {
 }
 
 
-.box__letter{
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,.5);
+.boxMail .card2 .card2-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.boxMail .card2 .letter__border{
     width: 100%;
     height: 100%;
-    z-index: 10;
-    display: none;
-}
-.box__letter .letter__border{
-    position: absolute;
-    width: 55vw;
-    height: 450px;
     background-color: var(--color-white);
     border-radius: 27px;
     padding: 17px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: none;
-}
-.letter__border .close{
-    position: absolute;
-    right: -10px;
-    top: -10px;
-    width: 30px;
-    height: 30px;
-    background-color: var(--color-white);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    cursor: pointer;
 }
 .letter__border .letter{
     width: 100%;
@@ -504,6 +481,7 @@ body {
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
     font-size: 2.4rem;
+    color: var(--color-black);
 }
 .title__letter .fa-solid{
     margin-left: 5px;
@@ -514,6 +492,8 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     padding-top: 1.5rem;
     padding-bottom: 70px;
 }
@@ -596,6 +576,10 @@ body {
     padding: 20px 15px 10px 15px;
     font-family: 'Dancing Script', cursive;
     font-size: 1.3rem;
+    color: var(--color-black);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 .content__letter .right #mewmew{
     position: absolute;
@@ -703,18 +687,10 @@ body {
         animation: topHat 4s 7s forwards ease;
     }
 
-    .box__letter .letter__border {
-        position: absolute;
-        width: 90vw;
-        height: 315px;
-        background-color: var(--color-white);
-        border-radius: 27px;
-        padding: 17px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        display: none;
+    .boxMail .card2 .letter__border {
+        width: 100%;
+        height: auto;
+        min-height: 315px;
     }
 
     .letter__border .letter {
@@ -730,6 +706,7 @@ body {
         font-family: 'Dancing Script', cursive;
         font-weight: bold;
         font-size: 1.4rem;
+        color: var(--color-black);
     }
 
     .letter__border .letter .content__letter {
@@ -737,6 +714,8 @@ body {
         width: 100%;
         height: 100%;
         display: flex;
+        align-items: center;
+        justify-content: center;
         padding-top: .7rem;
         padding-bottom: 70px;
     }
@@ -746,6 +725,10 @@ body {
         padding: 20px 15px 10px 15px;
         font-family: 'Dancing Script', cursive;
         font-size: .8rem;
+        color: var(--color-black);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .content__letter .right .love__img {
@@ -917,101 +900,14 @@ body {
     overflow: hidden;
     font-family: "Inter", serif;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 .boxMail .boxMail-container:hover .card2-content{
     transform: translate(20px, 20px);
     box-shadow: -1px -1px 5px rgb(0, 0, 0, 0.4);
-}
-.boxMail .boxMail-container .card2 h3{
-    font-family: 'Dancing Script', cursive;
-    padding: 20px 0px 10px 60px;
-    opacity: 0;
-    visibility: hidden;
-    font-size: 25px;
-    text-shadow: 0 0 8px #FF7882;
-}
-.boxMail .boxMail-container .card2:hover h3{
-    animation: texth3 3s forwards;
-    animation-delay: 2s;
-    transition: 1s;
-}
-@keyframes texth3{
-    0%{
-        opacity: 1;
-        visibility: visible;
-        padding: 20px 0px 10px 60px;
-    }
-    100%{
-        opacity: 1;
-        visibility: visible;
-        padding: 20px 0px 10px 152px; 
-    }
-}
-.boxMail .boxMail-container .card2 h2{
-    font-family: 'Dancing Script', cursive;
-    padding: 0px 20px;
-    text-indent: 20px;
-    font-size: 22px;
-    opacity: 0;
-}
-.boxMail .boxMail-container .card2:hover h2{
-    animation: texth2 2s forwards;
-    animation-delay: 4s;
-    transition: 1s;
-}
-@keyframes texth2{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-.boxMail .boxMail-container .card2 .card2-content .imageCute2{
-    position: absolute;
-    top: 5px;
-    left: 20px;
-    opacity: 0;
-    transition: 1s;
-}
-.boxMail .boxMail-container .card2 .card2-content:hover .imageCute2{
-    animation: cute3 1s linear infinite,
-                cute4 3s 2s forwards;
-    animation-delay: 2s;
-    transition: 1s;
-}
-@keyframes cute3{
-    0%{
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-    25%{
-        opacity: 1;
-        transform: rotate(5deg);
-    }
-    50%{
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-    75%{
-        opacity: 1;
-        transform: rotate(-5deg);
-    }
-    100%{
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-}
-@keyframes cute4{
-    0%{
-        left: 20px;
-    }
-    100%{
-        left: 100px;
-    }
-}
-.boxMail .boxMail-container .card2 .card2-content .imageCute2 img{
-    width: 40px;
 }
 .boxMail .fa-xmark{
     position: fixed;

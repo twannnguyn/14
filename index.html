@@ -65,7 +65,7 @@
             <div class="right">
                 <div class="box__account">
                     <div class="image">
-                        <img src="./images/unnamed.png" alt="">
+                        <img src="images/14.jpg" alt="">
                     </div>
                     <div class="name">
                         <i class="fa-solid fa-heart"></i>
@@ -129,7 +129,7 @@
             <div class="boxMail-container">
                 <div class="card1">
                     <div class="userImg">
-                        <img src="images/unnamed.png" alt="">
+                        <img src="images/14.jpg" alt="">
                     </div>
                     <h4 class="username">To:Sally 💖<span class="underline"></span></h4>
                     <!-- need changes -->
@@ -141,120 +141,32 @@
                 </div>
                 <div class="card2">
                     <div class="card2-content">
-                        <h3>To Sally</h3>
-                        <h2>
-                        </h2>
-
-                        <div class="imageCute2">
-                            <img src="cute2.png" alt="">
+                        <div class="letter__border">
+                            <div class="letter">
+                                <div class="title__letter"></div>
+                                <div class="content__letter">
+                                    <div class="left">
+                                        <i class="fa-solid fa-heart heart heart_1" style="--t: .5s;"></i>
+                                        <i class="fa-solid fa-heart heart heart_2" style="--t: .7s;"></i>
+                                        <i class="fa-solid fa-heart heart heart_3" style="--t: .9s;"></i>
+                                        <i class="fa-solid fa-heart heart heart_4" style="--t: 1.1s;"></i>
+                                    </div>
+                                    <div class="right">
+                                        <div class="text__letter">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 
 </body>
-<script>
-    let datetxt = "14 November";
-    let datatxtletter = "hôm ni sinh nhật cục dàng, anh chúc em có thật nhìu A+, nhìu niềm zui trong cuộc sống, không hối hặn bởi lựa chọn cụa mình, luôn là chính mình và vẫn mãi xinh. LAST OF ALL STOP RAGE BAITING MY ASS BAE ur luv p/s: anh ngu văn nên viết lủng củng💕";
-    let titleLetter = "To Sally";
-    let charArrDate = datetxt.split('');
-    let charArrDateLetter = datatxtletter.split('');
-    let charArrTitle = titleLetter.split('');
-    let currentIndex = 0;
-    let currentIndexLetter = 0;
-    let currentIndexTitle = 0;
-    let date__of__birth = document.querySelector(".date__of__birth span");
-    let text__letter = document.querySelector(".text__letter p");
-    setTimeout(function () {
-        timeDatetxt = setInterval(function () {
-            if (currentIndex < charArrDate.length) {
-                date__of__birth.textContent += charArrDate[currentIndex];
-                currentIndex++;
-            }
-            else {
-                let i = document.createElement("i");
-                i.className = "fa-solid fa-star"
-                document.querySelector(".date__of__birth").prepend(i)
-                document.querySelector(".date__of__birth").appendChild(i.cloneNode(true))
-                clearInterval(timeDatetxt)
-            }
-        }, 100)
-    }, 12000)
-
-    var intervalContent;
-    var intervalTitle;
-    $("#btn__letter").on("click", function () {
-        $(".box__letter").slideDown()
-        setTimeout(function () {
-            $(".letter__border").slideDown();
-        }, 1000)
-        setTimeout(function () {
-            intervalTitle = setInterval(function () {
-                if (currentIndexTitle < charArrTitle.length) {
-                    document.querySelector(".title__letter").textContent += charArrTitle[currentIndexTitle];
-                    let i = document.createElement("i");
-                    i.className = "fa-solid fa-heart"
-                    document.querySelector(".title__letter").appendChild(i)
-                    currentIndexTitle++;
-                }
-                else {
-                    clearInterval(intervalTitle)
-                }
-            }, 100)
-        }, 1000)
-        setTimeout(function () {
-            document.querySelector("#heart__letter").classList.add("animationOp");
-            document.querySelector(".love__img").classList.add("animationOp");
-            document.querySelector("#mewmew").classList.add("animationOp");
-        }, 2000)
-        setTimeout(function () {
-            document.querySelectorAll(".heart").forEach((item) => {
-                item.classList.add("animation")
-            })
-        }, 3500)
-        setTimeout(function () {
-            intervalContent = setInterval(function () {
-                if (currentIndexLetter < charArrDateLetter.length) {
-                    text__letter.textContent += charArrDateLetter[currentIndexLetter];
-                    currentIndexLetter++;
-                }
-                else {
-                    clearInterval(intervalContent)
-                }
-            }, 50)
-        }, 3000)
-    })
-    $(".close").on("click", function () {
-        clearInterval(intervalContent)
-        document.querySelector(".title__letter").textContent = "";
-        text__letter.textContent = "";
-        currentIndexLetter = 0
-        currentIndexTitle = 0
-        document.querySelector("#heart__letter").classList.remove("animationOp");
-        document.querySelector(".love__img").classList.remove("animationOp");
-        document.querySelector("#mewmew").classList.remove("animationOp");
-        document.querySelectorAll(".heart").forEach((item) => {
-            item.classList.remove("animation")
-        })
-        $(".box__letter").slideUp();
-        $(".letter__border").slideUp();
-    })
-
-
-
-    let mailBox = document.querySelector('.mail')
-    let boxmail = document.querySelector('.boxMail')
-    var close = document.querySelector('.fa-xmark')
-    mailBox.onclick = function () {
-        mailBox.classList.toggle('active')
-        boxmail.classList.add('active')
-    }
-
-    close.addEventListener('click', function () {
-        boxmail.classList.remove('active')
-    })
-</script>
+<script src="index.js"></script>
 
 </html>
