@@ -69,7 +69,8 @@
                     </div>
                     <div class="name">
                         <i class="fa-solid fa-heart"></i>
-                        <span>Dear Mehwish</span>
+                        <span>Dear Sally</span> 
+                        <!-- need changes -->
                         <i class="fa-solid fa-heart"></i>
                     </div>
                     <div class="balloon_one">
@@ -130,7 +131,8 @@
                     <div class="userImg">
                         <img src="images/unnamed.png" alt="">
                     </div>
-                    <h4 class="username">To: Mehwish 💖<span class="underline"></span></h4>
+                    <h4 class="username">To:Sally 💖<span class="underline"></span></h4>
+                    <!-- need changes -->
 
                     <h3>Happy Birthday</h3>
                     <div class="imageCute">
@@ -155,8 +157,8 @@
 </body>
 <script>
     let datetxt = "14 November";
-    let datatxtletter = "My love. You are a very special girl. I always silently thank you for coming into my life. Today, I wish you all the best, lots of health, and lots of joy. I always hope we will celebrate many more birthdays like this together. Happy birthday to you.💕";
-    let titleLetter = "To you";
+    let datatxtletter = "hôm ni sinh nhật cục dàng, anh chúc em có thật nhìu A+, nhìu niềm zui trong cuộc sống, không hối hặn bởi lựa chọn cụa mình, luôn là chính mình và vẫn mãi xinh. LAST OF ALL STOP RAGE BAITING MY ASS BAE ur luv p/s: anh ngu văn nên viết lủng củng💕";
+    let titleLetter = "To Sally";
     let charArrDate = datetxt.split('');
     let charArrDateLetter = datatxtletter.split('');
     let charArrTitle = titleLetter.split('');
@@ -201,12 +203,12 @@
                     clearInterval(intervalTitle)
                 }
             }, 100)
-        }, 2000)
+        }, 1000)
         setTimeout(function () {
             document.querySelector("#heart__letter").classList.add("animationOp");
             document.querySelector(".love__img").classList.add("animationOp");
             document.querySelector("#mewmew").classList.add("animationOp");
-        }, 2800)
+        }, 2000)
         setTimeout(function () {
             document.querySelectorAll(".heart").forEach((item) => {
                 item.classList.add("animation")
@@ -222,7 +224,7 @@
                     clearInterval(intervalContent)
                 }
             }, 50)
-        }, 6000)
+        }, 3000)
     })
     $(".close").on("click", function () {
         clearInterval(intervalContent)
